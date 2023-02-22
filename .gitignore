@@ -1,0 +1,6 @@
+*.txt
+*.log
+venv
+*.pyc
+.idea
+*.csv
