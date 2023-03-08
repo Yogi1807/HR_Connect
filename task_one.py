@@ -5,7 +5,7 @@ be in following format
 
 
 import csv
-from pprint import pprint   # for pretty print we use this
+from pprint import pprint # for pretty print
 from typing import Dict
 
 
