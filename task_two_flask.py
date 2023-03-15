@@ -1,5 +1,4 @@
 from my_utils.csv_ import HandleCSV
-from typing import Dict
 from datetime import datetime
 from flask import Flask, render_template
 
@@ -13,7 +12,7 @@ def joining_date(less: int, greater: int, salary_: int) -> str:
     information = {}
 
     for info in bar:
-        if less <= int(info['DEPARTMENT_ID']) < greater and int(info["SALARY"]) > salary_:
+        if int(info['DEPARTMENT_ID']) in range(less, greater) and int(info["SALARY"]) > salary_:
             ti = datetime.strptime(info["HIRE_DATE"], "%d-%b-%y")
             time = ti.strftime("%Y-%m-%d")
             if time not in information:
