@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Joining Date</title>
+</head>
+<body>
+	<h1>Employee Joining Dates</h1>
+	{% if emp %}
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Phone</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for num, employees in emp.items() %}
+					<tr>
+						<td>{{ employees["Name"] }}</td>
+						<td>{{ employees["email"] }}</td>
+						<td>{{ employees["Phone"] }}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% else %}
+		<p>No data found.</p>
+	{% endif %}
+</body>
+</html>

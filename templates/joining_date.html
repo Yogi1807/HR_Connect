@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Joining Date</title>
+</head>
+<body>
+	<h1>Employee Joining Dates</h1>
+	{% if information %}
+		<table>
+			<thead>
+				<tr>
+					<th>Joining Date</th>
+					<th>Employees</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for date, employees in information.items() %}
+					<tr>
+						<td>{{ date }}</td>
+						<td>{{ employees  }}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% else %}
+		<p>No employees found.</p>
+	{% endif %}
+</body>
+</html>

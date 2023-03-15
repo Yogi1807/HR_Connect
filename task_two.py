@@ -1,7 +1,6 @@
 """
 Write a program to get "HIRE DATE" of employee who's department id within range 30
 to 110 AND who's salary is > 4200.
-
 """
 
 import csv

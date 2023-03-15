@@ -1,13 +1,21 @@
+import csv
+
+
 class HandleCSV:
-    filename = "<absolute-path-of-downloaded-file-here>"
+    filename = "C:\\Users\\Shree\\VelocityProjects\\HRConnect\\employees.csv"
 
     @classmethod
     def read_entire_csv(cls):
+        li = []
         with open(cls.filename, "r") as foo:
-            return foo.readlines()
+            result = csv.DictReader(foo)
+            for i in result:
+                li.append(i)
+        return li
 
     @classmethod
     def read_csv_line_by_line(cls):
         with open(cls.filename) as bar:
             yield bar.readline()
+
 
