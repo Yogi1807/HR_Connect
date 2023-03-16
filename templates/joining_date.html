@@ -25,7 +25,7 @@
 				{% for date, employees in information.items() %}
 					<tr>
 						<td>{{ date }}</td>
-						<td>{{ employees  }}</td>
+						<td>{{ ", ".join(employees)  }}</td>
 					</tr>
 				{% endfor %}
 			</tbody>
